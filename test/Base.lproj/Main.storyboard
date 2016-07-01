@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJO-4V-cad" userLabel="SecondView">
+                                <rect key="frame" x="0.0" y="307.5" width="600" height="292.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjN-A4-l0h" userLabel="FirstView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="292.5"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="KzX-Fl-TAq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KzX-Fl-TAq"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bjN-A4-l0h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="2J5-br-yso"/>
+                            <constraint firstItem="bjN-A4-l0h" firstAttribute="width" secondItem="xJO-4V-cad" secondAttribute="width" id="Ds0-u8-ASz"/>
+                            <constraint firstItem="bjN-A4-l0h" firstAttribute="leading" secondItem="xJO-4V-cad" secondAttribute="trailing" constant="10" id="JAY-o5-obx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bjN-A4-l0h" secondAttribute="trailing" constant="-20" id="MFH-y7-Ire"/>
+                            <constraint firstItem="bjN-A4-l0h" firstAttribute="height" secondItem="xJO-4V-cad" secondAttribute="height" id="Nql-8w-uoU"/>
+                            <constraint firstItem="xJO-4V-cad" firstAttribute="top" secondItem="bjN-A4-l0h" secondAttribute="bottom" constant="15" id="R1O-Or-x22"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bjN-A4-l0h" secondAttribute="bottom" id="Xku-RL-d0x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xJO-4V-cad" secondAttribute="trailing" constant="-20" id="ada-9e-79V"/>
+                            <constraint firstItem="xJO-4V-cad" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="ltt-Xl-qBi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xJO-4V-cad" secondAttribute="bottom" id="pgX-QZ-zJz"/>
+                            <constraint firstItem="xJO-4V-cad" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ufA-4A-h5i"/>
+                            <constraint firstItem="bjN-A4-l0h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="vsq-yO-1Gk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JAY-o5-obx"/>
+                                <exclude reference="ltt-Xl-qBi"/>
+                                <exclude reference="Xku-RL-d0x"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="firstView" destination="xJO-4V-cad" id="iSo-MD-ksp"/>
+                        <outlet property="landScapeConstraint" destination="KzX-Fl-TAq" id="lDG-3w-DaT"/>
+                        <outlet property="landScapeConstraint2" destination="ltt-Xl-qBi" id="1ok-Mx-IKq"/>
+                        <outlet property="landScapeConstraint3" destination="JAY-o5-obx" id="GwY-3B-3ni"/>
+                        <outlet property="landScapeConstraint4" destination="Xku-RL-d0x" id="49G-LB-hP3"/>
+                        <outlet property="portrateConstraint" destination="2J5-br-yso" id="WNy-VB-D69"/>
+                        <outlet property="portrateConstraint2" destination="R1O-Or-x22" id="YON-US-Xuy"/>
+                        <outlet property="portrateConstraint3" destination="ada-9e-79V" id="gem-DR-8la"/>
+                        <outlet property="sameHeightConstraintWhenVertical" destination="Nql-8w-uoU" id="g3a-xO-wAY"/>
+                        <outlet property="sameWidthWhenHorizontal" destination="Ds0-u8-ASz" id="uza-ll-e0c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="319"/>
+        </scene>
+    </scenes>
+</document>
